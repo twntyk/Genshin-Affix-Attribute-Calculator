@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artifact Attribute Chance</title>
+    <meta name="description" content="Calculate artifact affix/attribute chances in Genshin Impact with precision!">
+	<meta name="keywords" content="Genshin Impact, artifact calculator, affix probability, attribute chance">
+	<meta name="author" content="twntyk">
+    <meta property="og:title" content="Artifact Affix/Attribute Chance">
+    <meta property="og:description" content="A tool to calculate artifact affix/attribute probabilities in Genshin Impact.">
+    <meta property="og:image" content="icon.ico">
+
+    <title>Genshin Affix/Attribute Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="icon.ico">
 </head>
 <body>
+
+
     <img src="icon.ico" alt="Logo" class="logo">
     
     <div class="container">
-        <h1>Artifact Attribute Chance</h1>
+        <h1>Genshin Affix/Attribute Calculator</h1>
+<select id="language-selector">
+    <option value="en">English</option>
+    <option value="ru">Русский</option>
+    <option value="ua">Українська</option>
+</select>
 
-        <a href="Artifact attribute chance setup.zip" class="btn">Download Setup.exe ZIP</a>
-        <a href="Artifact attribute chance.zip" class="btn">Download(Portable)ZIP</a>
+
+        <a href="Genshin Affix Attribute Calculator_setup.zip" class="btn" id="download-setup">Download Setup.exe ZIP</a>
+        <a href="Genshin Affix Attribute Calculator(portable).zip" class="btn" id="download-portable">Download (Portable) ZIP</a>
         <a href="https://www.hoyolab.com/accountCenter/postList?id=424208739" class="btn">HoYoLab Page</a>
         <a href="https://www.paypal.com/donate/?hosted_button_id=DMNS5VLXS7ZAQ" class="btn donate-btn">Donate via PayPal</a>
         
-        <p class="description">
-            This tool helps you calculate artifact attribute chances in Genshin Impact.  
+        <p class="description" id="description">
+            This tool helps you calculate artifact affix/attribute chances in Genshin Impact.  
             Get precise probabilities for different stats and optimize your artifacts!
         </p>
 
@@ -27,10 +42,97 @@
             <img src="1.png" alt="Screenshot 1" class="screenshot">
             <img src="2.png" alt="Screenshot 2" class="screenshot">
         </div>
+
+        <div class="info-section">
+            <h2 id="main-affix-title">Main Affix</h2>
+            <p id="main-affix-description">The main affix is always HP for the Flower of Life and always ATK for the Plume of Death.</p>
+            
+            <h3 id="sands-title">Sands of Eon</h3>
+            <table>
+                <tr><th data-i18n="attribute">Attribute</th><th data-i18n="chance">Chance</th></tr>
+                <tr><td>HP%</td><td>26.68%</td></tr>
+                <tr><td>ATK%</td><td>26.66%</td></tr>
+                <tr><td>DEF%</td><td>26.66%</td></tr>
+                <tr><td>Energy Recharge%</td><td>10.00%</td></tr>
+                <tr><td>Elemental Mastery</td><td>10.00%</td></tr>
+            </table>
+
+            <h3 id="goblet-title">Goblet of Eonothem</h3>
+            <table>
+                <tr><th data-i18n="attribute">Attribute</th><th data-i18n="chance">Chance</th></tr>
+                <tr><td>HP%</td><td>19.25%</td></tr>
+                <tr><td>ATK%</td><td>19.25%</td></tr>
+                <tr><td>DEF%</td><td>19.00%</td></tr>
+                <tr><td>Pyro DMG Bonus%</td><td>5.00%</td></tr>
+                <tr><td>Electro DMG Bonus%</td><td>5.00%</td></tr>
+                <tr><td>Cryo DMG Bonus%</td><td>5.00%</td></tr>
+                <tr><td>Hydro DMG Bonus%</td><td>5.00%</td></tr>
+                <tr><td>Dendro DMG Bonus%</td><td>5.00%</td></tr>
+                <tr><td>Anemo DMG Bonus%</td><td>5.00%</td></tr>
+                <tr><td>Geo DMG Bonus%</td><td>5.00%</td></tr>
+                <tr><td>Physical DMG Bonus%</td><td>5.00%</td></tr>
+                <tr><td>Elemental Mastery</td><td>2.50%</td></tr>
+            </table>
+
+            <h3 id="circlet-title">Circlet of Logos</h3>
+            <table>
+                <tr><th data-i18n="attribute">Attribute</th><th data-i18n="chance">Chance</th></tr>
+                <tr><td>HP%</td><td>22.00%</td></tr>
+                <tr><td>ATK%</td><td>22.00%</td></tr>
+                <tr><td>DEF%</td><td>22.00%</td></tr>
+                <tr><td>CRIT Rate%</td><td>10.00%</td></tr>
+                <tr><td>CRIT DMG%</td><td>10.00%</td></tr>
+                <tr><td>Healing Bonus%</td><td>10.00%</td></tr>
+                <tr><td>Elemental Mastery</td><td>4.00%</td></tr>
+            </table>
+
+            <h2 id="minor-affix-title">Minor Affix Attribute</h2>
+            <p id="minor-affix-description">When rolling the initial minor affixes or adding a minor affix upon a new tier, the probability for each minor affix is dependent on the available pool and calculated based on fixed weight.</p>
+            
+            <table>
+                <tr><th data-i18n="attribute">Attribute</th><th data-i18n="weight">Weight</th></tr>
+                <tr><td>HP</td><td>6</td></tr>
+                <tr><td>ATK</td><td>6</td></tr>
+                <tr><td>DEF</td><td>6</td></tr>
+                <tr><td>HP%</td><td>4</td></tr>
+                <tr><td>ATK%</td><td>4</td></tr>
+                <tr><td>DEF%</td><td>4</td></tr>
+                <tr><td>Energy Recharge%</td><td>4</td></tr>
+                <tr><td>Elemental Mastery</td><td>4</td></tr>
+                <tr><td>CRIT Rate%</td><td>3</td></tr>
+                <tr><td>CRIT DMG%</td><td>3</td></tr>
+            </table>
+			<h3 id="formula-title">Formula for Minor Affix Probability</h3>
+<p id="formula-description">The probability for a specific minor affix is calculated as:</p>
+
+<pre>
+P(A) = Weight(A) / ∑(Weight of Available Minor Affixes)
+</pre>
+
+<h3 id="example-title">Example Calculation</h3>
+<p id="example-description">For example, if a 5-Star Plume of Death already has ATK%, Energy Recharge%, and CRIT Rate% minor affixes when it reaches level 4, the probability of obtaining CRIT DMG% as a 4th minor affix is:</p>
+
+<pre>
+P(CRIT DMG) = Weight(CRIT DMG) / (Weight(HP) + Weight(DEF) + Weight(HP%) + Weight(DEF%) + Weight(EM) + Weight(CRIT DMG))
+           = 3 / (6 + 6 + 4 + 4 + 4 + 3)
+           ≈ 11.1%
+</pre>
+            <h3 id="upgrade-times-title">Minor Affix Slot Upgrade Times</h3>
+            <table>
+                <tr><th>Upgrades</th><th>Chance</th></tr>
+                <tr><td>0 times</td><td>23.73%</td></tr>
+                <tr><td>1 time</td><td>39.55%</td></tr>
+                <tr><td>2 times</td><td>26.37%</td></tr>
+                <tr><td>3 times</td><td>8.79%</td></tr>
+                <tr><td>4 times</td><td>1.46%</td></tr>
+                <tr><td>5 times</td><td>0.09%</td></tr>
+            </table>
+        </div>
     </div>
 
     <footer>
         <p>© 2025 twntyk | Version 1.0</p>
     </footer>
+	<script src="lang.js"></script>
 </body>
 </html>

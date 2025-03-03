@@ -126,3 +126,43 @@ footer {
         width: 100%; /* Изображения на всю ширину */
     }
 }
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Секция "Как это работает" - выравнивание текста и заголовков влево */
+.info-section {
+    text-align: left;
+    padding: 20px;
+}
+#language-selector {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+#language-selector:hover {
+    background-color: #444444;
+    transform: scale(1.05);
+}
+
+#language-selector:focus {
+    border-color: #777777;
+}
