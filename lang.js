@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Встановлюємо мову в селекторі
     languageSelector.value = lang;
-
+	document.documentElement.lang = lang;
     // Додаємо обробник зміни мови
     languageSelector.addEventListener("change", function () {
         const newLang = languageSelector.value;
