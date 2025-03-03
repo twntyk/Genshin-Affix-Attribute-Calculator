@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Отримуємо мову з URL, localStorage або браузера
     const urlParams = new URLSearchParams(window.location.search);
     let lang = urlParams.get("lang") || localStorage.getItem("lang") || navigator.language.substring(0, 2);
-
+ console.log("🌍 Вибрана мова:", lang);
     // Обробляємо можливі значення мови
     if (!["en", "ru", "ua"].includes(lang)) {
         lang = "en"; // Мова за замовчуванням
     }
 
-    console.log("🌍 Вибрана мова:", lang);
+   
 
     // Встановлюємо мову в селекторі
     languageSelector.value = lang;
