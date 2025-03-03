@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let lang = urlParams.get("lang") || localStorage.getItem("lang") || navigator.language.substring(0, 2);
  console.log("🌍 Вибрана мова:", lang);
     // Обробляємо можливі значення мови
-    if (!["en", "ru", "ua"].includes(lang)) {
+    if (!["en", "ru", "uk"].includes(lang)) {
         lang = "en"; // Мова за замовчуванням
     }
 
@@ -75,7 +75,7 @@ function applyTranslation(lang) {
 			"chance": "Шанс",
 			"weight": "Вес"
         },
-        "ua": {
+        "uk": {
             "description": "Цей інструмент допоможе вам розрахувати шанси випадання афіксів/доп-стат на артефакті Genshin Impact. Отримайте точні ймовірності для різних характеристик та оптимізуйте свої артефакти!",
 			"download-setup": "Завантажити Setup.exe ZIP",
 			"download-portable": "Завантажити (Портативная версия) ZIP",
