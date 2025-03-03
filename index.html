@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV9PPE8P3J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LV9PPE8P3J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-LV9PPE8P3J');
-</script>
+      gtag('config', 'G-LV9PPE8P3J', {
+          'anonymize_ip': true, // Анонімізація IP для відповідності GDPR
+          'page_path': window.location.pathname + window.location.search // Враховує зміни мови
+      });
+    </script>
+
+    <!-- Основні мета-теги -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Calculate artifact affix/attribute chances in Genshin Impact with precision!">
-	<meta name="keywords" content="Genshin Impact, artifact calculator, affix probability, attribute chance">
-	<meta name="author" content="twntyk">
-	<meta name="robots" content="index, follow">
-	<link rel="canonical" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/?lang=en">
+    <meta name="keywords" content="Genshin Impact, artifact calculator, affix probability, attribute chance, Genshin artifacts">
+    <meta name="author" content="twntyk">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Канонічна URL -->
+    <link rel="canonical" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/?lang=en">
 
-	<link rel="alternate" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/?lang=en" hreflang="en">
-	<link rel="alternate" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/?lang=ru" hreflang="ru">
-	<link rel="alternate" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/?lang=uk" hreflang="uk">
-	<link rel="alternate" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/" hreflang="x-default">
+    <!-- Альтернативні версії мов -->
+    <link rel="alternate" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/?lang=en" hreflang="en">
+    <link rel="alternate" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/?lang=ru" hreflang="ru">
+    <link rel="alternate" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/?lang=uk" hreflang="uk">
+    <link rel="alternate" href="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/" hreflang="x-default">
 
-    	<meta property="og:title" content="Artifact Affix/Attribute Chance">
-    	<meta property="og:description" content="A tool to calculate artifact affix/attribute probabilities in Genshin Impact.">
-    	<meta property="og:image" content="icon.ico">
-	<meta property="og:type" content="website">
+    <!-- Open Graph (SEO для соцмереж) -->
+    <meta property="og:title" content="Artifact Affix/Attribute Chance">
+    <meta property="og:description" content="A tool to calculate artifact affix/attribute probabilities in Genshin Impact.">
+    <meta property="og:image" content="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/icon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/">
+
+    <!-- Twitter Cards (для покращення відображення у Twitter) -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Artifact Affix/Attribute Chance">
+    <meta name="twitter:description" content="A tool to calculate artifact affix/attribute probabilities in Genshin Impact.">
+    <meta name="twitter:image" content="https://twntyk.github.io/Genshin-Affix-Attribute-Calculator/icon.ico">
+
+    <!-- Назва сторінки -->
     <title>Genshin Affix/Attribute Calculator</title>
+
+    <!-- CSS та фавікон -->
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="icon.ico">
 </head>
