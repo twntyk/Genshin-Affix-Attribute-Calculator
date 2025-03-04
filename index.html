@@ -81,6 +81,7 @@
         </div>
 
         <div class="info-section">
+		<p id="info-description">Understanding the mechanics of how additional minor attribute/affix appear on artifacts in Genshin Impact is key to optimizing character gear. Many players struggle with unwanted stats on artifacts and do not understand the actual probability of obtaining the desired attributes.The general information looks like this:</p>
             <h2 id="main-affix-title">Main Affix</h2>
             <p id="main-affix-description">The main affix is always HP for the Flower of Life and always ATK for the Plume of Death.</p>
             
@@ -125,7 +126,7 @@
 
             <h2 id="minor-affix-title">Minor Affix Attribute</h2>
             <p id="minor-affix-description">When rolling the initial minor affixes or adding a minor affix upon a new tier, the probability for each minor affix is dependent on the available pool and calculated based on fixed weight.</p>
-            
+            <p id="more-minor-affix-description">When upgrade a legendary artifact to level 4, the probability of obtaining a specific minor attribute/affix depends on the available pool and the fixed weights of each attribute/affix. The pool, in simple terms, is a list of attributes where each attribute has its own assigned weight—essentially its significance or rarity.</p>
             <table>
                 <tr><th data-i18n="attribute">Attribute</th><th data-i18n="weight">Weight</th></tr>
                 <tr><td>HP</td><td>6</td></tr>
@@ -142,18 +143,18 @@
 			<h3 id="formula-title">Formula for Minor Affix Probability</h3>
 <p id="formula-description">The probability for a specific minor affix is calculated as:</p>
 
-<pre>
+<p>
 P(A) = Weight(A) / ∑(Weight of Available Minor Affixes)
-</pre>
+</p>
 
 <h3 id="example-title">Example Calculation</h3>
 <p id="example-description">For example, if a 5-Star Plume of Death already has ATK%, Energy Recharge%, and CRIT Rate% minor affixes when it reaches level 4, the probability of obtaining CRIT DMG% as a 4th minor affix is:</p>
 
-<pre>
+<p>
 P(CRIT DMG) = Weight(CRIT DMG) / (Weight(HP) + Weight(DEF) + Weight(HP%) + Weight(DEF%) + Weight(EM) + Weight(CRIT DMG))
            = 3 / (6 + 6 + 4 + 4 + 4 + 3)
            ≈ 11.1%
-</pre>
+</p>
             <h3 id="upgrade-times-title">Minor Affix Slot Upgrade Times</h3>
             <table>
                 <tr><th>Upgrades</th><th>Chance</th></tr>
