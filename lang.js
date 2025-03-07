@@ -31,8 +31,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Застосовуємо переклад
     applyTranslation(lang);
+	updateMetaTags(lang); 
 });
+function updateMetaTags(lang) {
+    const metaTags = {
+        "en": {
+            "keywords": "Genshin Impact, artifact calculator, affix probability, attribute chance, Genshin artifacts",
+            "description": "This tool helps you calculate artifact affix/attribute chances in Genshin Impact. Get precise probabilities for different stats and optimize your artifacts!"
+        },
+        "ru": {
+            "keywords": "Genshin Impact, калькулятор артефактов, вероятность аффиксов, шанс характеристик, артефакты Genshin",
+            "description": "Этот инструмент поможет вам рассчитать шансы выпадения аффиксов/доп-стат на артефакте в Genshin Impact."
+        },
+        "uk": {
+            "keywords": "Genshin Impact, калькулятор артефактів, ймовірність афіксів, шанс характеристик, артефакти Genshin",
+            "description": "Цей інструмент допоможе вам розрахувати шанси випадання афіксів/доп-стат на артефакті Genshin Impact."
+        }
+    };
 
+    function setMetaTag(name, content) {
+        let tag = document.querySelector(`meta[name='${name}']`);
+        if (!tag) {
+            tag = document.createElement("meta");
+            tag.name = name;
+            document.head.appendChild(tag);
+        }
+        tag.content = content;
+    }
+
+    setMetaTag("keywords", metaTags[lang].keywords);
+    setMetaTag("description", metaTags[lang].description);
+}
 function applyTranslation(lang) {
     const translations = {
         "en": {
